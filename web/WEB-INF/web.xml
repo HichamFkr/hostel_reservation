@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    
+    <servlet>
+        <servlet-name>Controleur</servlet-name>
+        <servlet-class>service.Controleur</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controleur</servlet-name>
+        <url-pattern>*.do</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ControleurClient</servlet-name>
+        <servlet-class>service.ControleurClient</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControleurClient</servlet-name>
+        <url-pattern>*.cl</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ControleurRe</servlet-name>
+        <servlet-class>service.ControleurRe</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControleurRe</servlet-name>
+        <url-pattern>*.re</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ControlLogin</servlet-name>
+        <servlet-class>service.ControlLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControlLogin</servlet-name>
+        <url-pattern>*.log</url-pattern> 
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
